@@ -1,0 +1,713 @@
+/* ========================================
+   VARIABLES & BASE
+   ======================================== */
+:root {
+    /* Hacker Colors */
+    --matrix-green: #00ff00;
+    --terminal-cyan: #00ffff;
+    --hacker-red: #ff0000;
+    --deep-black: #0a0a0a;
+    --dark-gray: #1a1a1a;
+    --light-green: #33ff33;
+    
+    /* SNES Colors (already in library) */
+    --snes-bg: #fff;
+    
+    /* Fonts */
+    --font-terminal: 'VT323', monospace;
+    --font-code: 'Share Tech Mono', monospace;
+    --font-pixel: 'Press Start 2P', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background: var(--deep-black);
+    color: #fff;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========================================
+   PARTICLE BACKGROUND
+   ======================================== */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(0, 255, 0, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(0, 255, 255, 0.05) 0%, transparent 50%),
+        var(--deep-black);
+    animation: particleFloat 20s ease-in-out infinite;
+}
+
+@keyframes particleFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* ========================================
+   HEADER WITH GLITCH EFFECT
+   ======================================== */
+.main-header {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background: linear-gradient(180deg, var(--dark-gray) 0%, var(--deep-black) 100%);
+    border-bottom: 3px solid var(--matrix-green);
+    position: relative;
+    overflow: hidden;
+}
+
+.main-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.1), transparent);
+    animation: scanline 3s linear infinite;
+}
+
+@keyframes scanline {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.glitch-wrapper {
+    margin-bottom: 30px;
+}
+
+.glitch {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-family: var(--font-pixel);
+    color: var(--matrix-green);
+    position: relative;
+    text-shadow: 
+        0 0 10px var(--matrix-green),
+        0 0 20px var(--matrix-green);
+    animation: glitchPulse 3s infinite;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.glitch::before {
+    color: var(--terminal-cyan);
+    animation: glitchBefore 2s infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+}
+
+.glitch::after {
+    color: var(--hacker-red);
+    animation: glitchAfter 2.5s infinite;
+    clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBefore {
+    0%, 90%, 100% {
+        transform: translate(0);
+    }
+    93% {
+        transform: translate(-5px, 2px);
+    }
+    96% {
+        transform: translate(5px, -2px);
+    }
+}
+
+@keyframes glitchAfter {
+    0%, 90%, 100% {
+        transform: translate(0);
+    }
+    92% {
+        transform: translate(5px, -2px);
+    }
+    95% {
+        transform: translate(-5px, 2px);
+    }
+}
+
+@keyframes glitchPulse {
+    0%, 90%, 100% {
+        opacity: 1;
+    }
+    92%, 95% {
+        opacity: 0.8;
+    }
+}
+
+/* Terminal Line with Typing Effect */
+.terminal-line {
+    font-family: var(--font-terminal);
+    font-size: 1.5rem;
+    color: var(--light-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.prompt {
+    color: var(--terminal-cyan);
+}
+
+.typing-text {
+    color: var(--matrix-green);
+}
+
+.cursor {
+    animation: blink 1s infinite;
+    color: var(--matrix-green);
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+/* ========================================
+   NAVIGATION
+   ======================================== */
+.main-nav {
+    background: var(--dark-gray);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--matrix-green);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.main-nav .container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* ========================================
+   SECTIONS
+   ======================================== */
+.section {
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--matrix-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* ========================================
+   ABOUT SECTION
+   ======================================== */
+#about {
+    background: linear-gradient(180deg, var(--deep-black) 0%, var(--dark-gray) 100%);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.avatar-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-text p {
+    line-height: 1.8;
+    font-size: 0.9rem;
+}
+
+.highlight {
+    background: var(--matrix-green);
+    color: var(--deep-black);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* ========================================
+   SKILLS SECTION
+   ======================================== */
+#skills {
+    background: var(--dark-gray);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.skill-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-badge:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.3);
+}
+
+/* Terminal Box - Hacker Style */
+.terminal-box {
+    margin: 30px 0;
+    background: var(--deep-black);
+    border: 2px solid var(--matrix-green);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 
+        0 0 20px rgba(0, 255, 0, 0.3),
+        inset 0 0 20px rgba(0, 255, 0, 0.1);
+}
+
+.terminal-header {
+    background: var(--dark-gray);
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid var(--matrix-green);
+}
+
+.terminal-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.terminal-button.red {
+    background: #ff5f56;
+}
+
+.terminal-button.yellow {
+    background: #ffbd2e;
+}
+
+.terminal-button.green {
+    background: #27c93f;
+}
+
+.terminal-title {
+    margin-left: auto;
+    font-family: var(--font-code);
+    color: var(--terminal-cyan);
+    font-size: 0.9rem;
+}
+
+.terminal-body {
+    padding: 20px;
+}
+
+.ascii-art {
+    font-family: var(--font-code);
+    color: var(--matrix-green);
+    font-size: 0.6rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 0 0 5px var(--matrix-green);
+}
+
+.terminal-content {
+    font-family: var(--font-code);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--light-green);
+}
+
+.prompt {
+    color: var(--terminal-cyan);
+}
+
+.command {
+    color: var(--matrix-green);
+}
+
+.success {
+    color: var(--matrix-green);
+    font-weight: bold;
+}
+
+.cursor-blink {
+    animation: blink 1s infinite;
+    color: var(--matrix-green);
+}
+
+/* Tech Badges */
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+/* ========================================
+   EXPERIENCE SECTION
+   ======================================== */
+#experience {
+    background: var(--deep-black);
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.experience-header h3 {
+    font-size: 1.2rem;
+    color: var(--matrix-green);
+}
+
+.experience-date {
+    font-size: 0.8rem;
+    color: var(--terminal-cyan);
+    font-family: var(--font-code);
+}
+
+.nes-list.is-disc li {
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+
+/* ========================================
+   CERTIFICATIONS SECTION
+   ======================================== */
+#certifications {
+    background: var(--dark-gray);
+}
+
+.certs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.cert-card {
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cert-card:hover {
+    transform: translateY(-10px);
+}
+
+.cert-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.cert-card h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--matrix-green);
+}
+
+.cert-card p {
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.cert-tag {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Terminal Cert Card */
+.terminal-card {
+    background: var(--deep-black);
+    border: 2px solid var(--matrix-green);
+    box-shadow: 
+        0 0 20px rgba(0, 255, 0, 0.3),
+        0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.terminal-cert-header {
+    font-family: var(--font-code);
+    color: var(--terminal-cyan);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--matrix-green);
+}
+
+.cert-achievements {
+    text-align: left;
+    font-family: var(--font-code);
+}
+
+.achievement-line {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.achievement-line:hover {
+    background: rgba(0, 255, 0, 0.1);
+}
+
+.check-mark {
+    color: var(--matrix-green);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.progress-mark {
+    color: var(--terminal-cyan);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Achievement Box */
+.achievement-box {
+    margin-top: 30px;
+}
+
+.achievement-box .nes-container {
+    text-align: center;
+}
+
+/* ========================================
+   CONTACT SECTION
+   ======================================== */
+#contact {
+    background: var(--deep-black);
+}
+
+.terminal-contact {
+    background: var(--deep-black);
+    border: 2px solid var(--matrix-green);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 
+        0 0 30px rgba(0, 255, 0, 0.4),
+        inset 0 0 30px rgba(0, 255, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.contact-terminal {
+    font-family: var(--font-code);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--light-green);
+}
+
+.contact-terminal .info {
+    color: var(--terminal-cyan);
+}
+
+.contact-terminal .output {
+    color: #fff;
+    font-style: italic;
+}
+
+.contact-terminal a {
+    color: var(--matrix-green);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-terminal a:hover {
+    color: var(--terminal-cyan);
+    text-decoration: underline;
+}
+
+/* Social Buttons */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-buttons button {
+    font-size: 0.8rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-buttons button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.3);
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.main-footer {
+    background: var(--dark-gray);
+    padding: 40px 20px;
+    border-top: 3px solid var(--matrix-green);
+}
+
+.footer-terminal {
+    text-align: center;
+}
+
+.footer-terminal pre {
+    font-family: var(--font-code);
+    color: var(--matrix-green);
+    font-size: 0.75rem;
+    line-height: 1.5;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 768px) {
+    .section {
+        padding: 40px 15px;
+    }
+    
+    .main-header {
+        padding: 60px 15px 30px;
+    }
+    
+    .terminal-line {
+        flex-direction: column;
+        font-size: 1rem;
+    }
+    
+    .ascii-art {
+        font-size: 0.4rem;
+    }
+    
+    .terminal-content,
+    .contact-terminal {
+        font-size: 0.75rem;
+    }
+    
+    .certs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .social-buttons {
+        flex-direction: column;
+    }
+    
+    .social-buttons button {
+        width: 100%;
+    }
+}
+
+/* ========================================
+   ANIMATIONS & EFFECTS
+   ======================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Scroll Animation */
+.section > * {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-gray);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--matrix-green);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--light-green);
+}
