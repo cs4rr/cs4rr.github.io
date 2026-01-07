@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sebastian Ayala | QA Engineer → Pentester</title>
+    <title>Sebastian Ayala | QA Engineer • Cybersecurity Practitioner</title>
     
     <!-- SNES.css -->
     <link href="https://unpkg.com/snes.css@1.0.1/dist/snes.min.css" rel="stylesheet">
@@ -26,10 +26,11 @@
             <div class="glitch-wrapper">
                 <h1 class="glitch" data-text="SEBASTIAN AYALA">SEBASTIAN AYALA</h1>
             </div>
-            <div class="terminal-line">
-                <span class="prompt">root@security:~$</span>
-                <span class="typing-text"></span>
-                <span class="cursor">_</span>
+            <div class="expertise-grid">
+                <div class="expertise-item">TESTING • SOFTWARE QUALITY ASSURANCE</div>
+                <div class="expertise-item">FULLSTACK WEB DEVELOPER - MERN</div>
+                <div class="expertise-item">CYBERSECURITY PRACTITIONER</div>
+                <div class="expertise-item">CLOUD SECURITY PRACTITIONER</div>
             </div>
         </div>
     </header>
@@ -37,31 +38,36 @@
     <!-- Navigation -->
     <nav class="main-nav">
         <div class="container">
-            <a href="#about" class="nes-btn">ABOUT</a>
+            <a href="#about" class="nes-btn">PERFIL</a>
             <a href="#skills" class="nes-btn">SKILLS</a>
-            <a href="#experience" class="nes-btn">EXPERIENCE</a>
-            <a href="#certifications" class="nes-btn is-primary">CERTS</a>
-            <a href="#contact" class="nes-btn is-success">CONTACT</a>
+            <a href="#experience" class="nes-btn">EXPERIENCIA</a>
+            <a href="#certifications" class="nes-btn is-primary">CERTIFICACIONES</a>
+            <a href="#education" class="nes-btn is-success">EDUCACIÓN</a>
+            <a href="#contact" class="nes-btn is-warning">CONTACTO</a>
         </div>
     </nav>
 
     <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
-            <div class="nes-container is-dark with-title">
-                <p class="title">▸ SOBRE MÍ</p>
-                <div class="about-content">
-                    <div class="avatar-section">
-                        <i class="nes-icon is-large trophy"></i>
-                    </div>
-                    <div class="about-text">
-                        <p>QA Engineer/SDET con más de <strong>6 años de experiencia</strong> en testing de software, trabajando en instituciones bancarias y financieras en Paraguay.</p>
-                        <br>
-                        <p>Actualmente en <strong>transición activa hacia Cybersecurity y Pentesting</strong>, combinando mi experiencia en QA con entrenamiento práctico en seguridad ofensiva.</p>
-                        <br>
-                        <p><span class="highlight">ISTQB-HASTQB Certified</span> | Estudiante de Análisis de Sistemas</p>
-                    </div>
-                </div>
+            <h2 class="section-title">▸ PERFIL PROFESIONAL ◂</h2>
+            
+            <div class="nes-container is-dark">
+                <p class="profile-text">
+                    Profesional en Control de Calidad en Software con sólida experiencia en análisis de vulnerabilidades, Seguridad Informática, pentesting y automatización de pruebas. Certificado ISTQB-HASTQB con amplia formación práctica en plataformas especializadas (TryHackMe). Expertise en identificación de vulnerabilidades OWASP Top 10, análisis de seguridad de aplicaciones web/móviles, y manejo avanzado de herramientas de pentesting. Enfoque metodológico en pruebas de seguridad siguiendo estándares OSSTMM y PTES.
+                </p>
+            </div>
+
+            <!-- Professional Interests -->
+            <div class="nes-container with-title" style="margin-top: 30px;">
+                <p class="title">Intereses Profesionales</p>
+                <ul class="nes-list is-disc">
+                    <li>Desarrollo continuo en ciberseguridad y certificaciones avanzadas en pentesting</li>
+                    <li>Investigación en nuevas vulnerabilidades y técnicas de explotación</li>
+                    <li>Análisis de seguridad en arquitecturas cloud (AWS)</li>
+                    <li>Incursión al mundo del bug bounty hunter (Bugcrowd y otras plataformas)</li>
+                    <li>Exploración de aplicaciones de IA en seguridad informática</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -69,104 +75,81 @@
     <!-- Skills Section -->
     <section id="skills" class="section">
         <div class="container">
-            <h2 class="section-title">
-                <i class="nes-icon star is-small"></i>
-                HABILIDADES
-                <i class="nes-icon star is-small"></i>
-            </h2>
+            <h2 class="section-title">▸ CONOCIMIENTOS TÉCNICOS ◂</h2>
             
-            <!-- QA Skills - SNES Style -->
-            <div class="nes-container is-rounded">
-                <h3>⚡ QA & Testing</h3>
-                <div class="skills-grid">
-                    <div class="skill-badge">
-                        <i class="nes-icon trophy is-small"></i>
-                        <span>Manual Testing</span>
-                    </div>
-                    <div class="skill-badge">
-                        <i class="nes-icon trophy is-small"></i>
-                        <span>Automation</span>
-                    </div>
-                    <div class="skill-badge">
-                        <i class="nes-icon trophy is-small"></i>
-                        <span>ISTQB Certified</span>
-                    </div>
-                    <div class="skill-badge">
-                        <i class="nes-icon trophy is-small"></i>
-                        <span>API Testing</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Security Skills - Hacker Style -->
+            <!-- Security & Pentesting - Terminal Style -->
             <div class="terminal-box">
                 <div class="terminal-header">
                     <span class="terminal-button red"></span>
                     <span class="terminal-button yellow"></span>
                     <span class="terminal-button green"></span>
-                    <span class="terminal-title">security_skills.sh</span>
+                    <span class="terminal-title">🔐 security_pentesting.sh</span>
                 </div>
                 <div class="terminal-body">
-                    <div class="ascii-art">
-    _____ _____ _____ _____ _____    _____ _____ _____ 
-   |   __|  |  | __  |   __| __  |  |   __|   __|     |
-   |  |__|-   -| __ -|   __|    -|  |__   |   __|   --|
-   |_____|__|__|_____|_____|__|__|  |_____|_____|_____|
-                    </div>
                     <pre class="terminal-content">
-<span class="prompt">┌──(seba㉿kali)-[~/skills/security]</span>
-<span class="prompt">└─$</span> <span class="command">cat offensive_security.txt</span>
+<span class="prompt">┌──(cs4rr㉿kali)-[~/skills]</span>
+<span class="prompt">└─$</span> <span class="command">cat security_expertise.txt</span>
 
-<span class="success">➜ TryHackMe Certified:</span>
-  • OWASP Top 10
-  • Security Awareness
-  • Linux Fundamentals
-  • Malware Analysis (in progress)
+<span class="success">➜ Vulnerabilidades & Frameworks:</span>
+  • OWASP Top 10 (identificación de vulnerabilidades web comunes)
+  • MITRE ATT&CK, OSSTMM, PTES (metodologías)
 
-<span class="success">➜ Security Tools:</span>
-  • Burp Suite
-  • Metasploit Framework
-  • Kali Linux
-  • Process Monitor
-  • Wireshark
+<span class="success">➜ Herramientas de Pentesting:</span>
+  • Caido, Burp Suite, Metasploit
+  • Nmap, Wireshark, Kali Linux (entorno virtualizado)
 
-<span class="success">➜ Frameworks & Knowledge:</span>
-  • OWASP Top 10
-  • MITRE ATT&CK
-  • Dynamic Malware Analysis
-  • Registry Monitoring
-  • Network Protocol Analysis
+<span class="success">➜ Experiencia Práctica:</span>
+  • Análisis de seguridad de APIs y servicios web
+  • Entornos Linux/Windows
+  • Protocolos: TCP/IP, DNS, HTTP/S
+  • Enrutamiento y seguridad perimetral
 
 <span class="prompt">└─$</span> <span class="cursor-blink">█</span>
                     </pre>
                 </div>
             </div>
 
-            <!-- Tech Stack -->
-            <div class="nes-container">
-                <h3>💻 Tech Stack</h3>
-                <div class="tech-badges">
-                    <span class="nes-badge">
-                        <span class="is-dark">Java</span>
-                    </span>
-                    <span class="nes-badge">                        
-                        <span class="is-dark">MERN</span>
-                    </span>
-                    <span class="nes-badge">
-                        <span class="is-dark">Python</span>
-                    </span>
-                    <span class="nes-badge">
-                        <span class="is-primary">AWS CP</span>
-                    </span>
-                    <span class="nes-badge">
-                        <span class="is-success">Linux</span>
-                    </span>
-                    <span class="nes-badge">
-                        <span class="is-warning">Git</span>
-                    </span>
-                    <span class="nes-badge">
-                        <span class="is-error">Selenium/Playwright</span>
-                    </span>
+            <!-- Development & Testing - SNES Style -->
+            <div class="skills-section">
+                <h3>⚡ Desarrollo y Testing</h3>
+                
+                <div class="skills-row">
+                    <div class="nes-container is-rounded skill-box">
+                        <h4>💻 Lenguajes</h4>
+                        <div class="tech-badges">
+                            <span class="nes-badge"><span class="is-warning">JavaScript</span></span>
+                            <span class="nes-badge"><span class="is-success">Python</span></span>
+                            <span class="nes-badge"><span class="is-primary">C#</span></span>
+                            <span class="nes-badge"><span class="is-error">JAVA</span></span>
+                        </div>
+                    </div>
+
+                    <div class="nes-container is-rounded skill-box">
+                        <h4>🚀 Frameworks</h4>
+                        <div class="tech-badges">
+                            <span class="nes-badge"><span class="is-dark">React.js</span></span>
+                            <span class="nes-badge"><span class="is-success">Django</span></span>
+                            <span class="nes-badge"><span class="is-primary">Flask</span></span>
+                            <span class="nes-badge"><span class="is-warning">Spring</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-row">
+                    <div class="nes-container is-rounded skill-box">
+                        <h4>🧪 Testing Tools</h4>
+                        <p class="skill-list">AIO • Xray • Azure DevOps • JMeter • Postman • Katalon Studio</p>
+                    </div>
+
+                    <div class="nes-container is-rounded skill-box">
+                        <h4>💾 Bases de Datos</h4>
+                        <p class="skill-list">PL/SQL • MySQL • MongoDB</p>
+                    </div>
+                </div>
+
+                <div class="nes-container is-rounded skill-box">
+                    <h4>🖥️ Sistemas & Redes</h4>
+                    <p class="skill-list">Administración de servidores Linux • CCNA (CPT, Wireshark, PuTTY)</p>
                 </div>
             </div>
         </div>
@@ -175,41 +158,49 @@
     <!-- Experience Section -->
     <section id="experience" class="section">
         <div class="container">
-            <h2 class="section-title">
-                <i class="nes-icon coin is-small"></i>
-                EXPERIENCIA PROFESIONAL
-                <i class="nes-icon coin is-small"></i>
-            </h2>
+            <h2 class="section-title">▸ EXPERIENCIA PROFESIONAL ◂</h2>
 
-            <div class="timeline">
-                <!-- Current Position -->
-                <div class="nes-container is-dark with-title">
-                    <p class="title">QA Engineer/SDET</p>
-                    <div class="experience-header">
-                        <h3>ITTI SA</h3>
-                        <span class="experience-date">Actual | Paraguay</span>
-                    </div>
-                    <ul class="nes-list is-disc">
-                        <li>Testing de software en entorno bancario</li>
-                        <li>Automatización de pruebas</li>
-                        <li>Análisis de requerimientos y documentación</li>
-                        <li>Colaboración con equipos de desarrollo</li>
-                    </ul>
+            <!-- Mango Payment - QA Engineer / SDET -->
+            <div class="nes-container is-dark with-title">
+                <p class="title">Ingeniero QA | SDET</p>
+                <div class="exp-header">
+                    <h3>Mango Payment SA</h3>
+                    <span class="exp-date">Nov 2023 - Abr 2024 | Paraguay</span>
                 </div>
+                <ul class="nes-list is-disc">
+                    <li>Análisis, diseño, ejecución y seguimiento de pruebas de software</li>
+                    <li>Automatización de pruebas de procesos internos</li>
+                    <li>Implementación de herramientas para manejo y gestión de pruebas</li>
+                    <li>Guía e instrucción de uso de herramientas a miembros del equipo</li>
+                </ul>
+            </div>
 
-                <!-- Previous Positions -->
-                <div class="nes-container with-title">
-                    <p class="title">QA Engineer</p>
-                    <div class="experience-header">
-                        <h3>Banco Continental & Banco ATLAS</h3>
-                        <span class="experience-date">Experiencia previa</span>
-                    </div>
-                    <ul class="nes-list is-disc">
-                        <li>Testing en sistemas financieros y bancarios</li>
-                        <li>Aseguramiento de calidad en aplicaciones críticas</li>
-                        <li>Pruebas funcionales y no funcionales</li>
-                    </ul>
+            <!-- Banco ATLAS -->
+            <div class="nes-container with-title">
+                <p class="title">Analista QA - Automation Testing</p>
+                <div class="exp-header">
+                    <h3>Banco ATLAS SA</h3>
+                    <span class="exp-date">Jun 2022 - Nov 2023 | Paraguay</span>
                 </div>
+                <ul class="nes-list is-disc">
+                    <li>Control y análisis de pruebas de software</li>
+                    <li>Automatización de procesos internos y ejecuciones de pruebas</li>
+                    <li>Gestión, planificación y seguimiento del desarrollo con proveedores</li>
+                    <li>Pruebas web y mobile con staff interno e internacional</li>
+                </ul>
+            </div>
+
+            <!-- Banco Continental -->
+            <div class="nes-container with-title">
+                <p class="title">Analista QA</p>
+                <div class="exp-header">
+                    <h3>Banco Continental SAECA</h3>
+                    <span class="exp-date">May 2018 - Ago 2022 | Paraguay</span>
+                </div>
+                <ul class="nes-list is-disc">
+                    <li>Analista de Control de Calidad de software</li>
+                    <li>Aseguramiento de calidad de los productos bancarios</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -217,63 +208,115 @@
     <!-- Certifications Section -->
     <section id="certifications" class="section">
         <div class="container">
-            <h2 class="section-title">
-                <i class="nes-icon star is-small"></i>
-                CERTIFICACIONES
-                <i class="nes-icon star is-small"></i>
-            </h2>
+            <h2 class="section-title">▸ CERTIFICACIONES ◂</h2>
 
             <div class="certs-grid">
                 <!-- ISTQB -->
-                <div class="cert-card nes-container is-rounded">
+                <div class="cert-card nes-container is-dark">
                     <div class="cert-icon">🏆</div>
                     <h4>ISTQB-HASTQB</h4>
-                    <p>Foundation Level</p>
-                    <div class="cert-tag nes-badge">
-                        <span class="is-success">Certified</span>
+                    <p>Certified Tester Foundation Level</p>
+                    <a href="https://www.youracclaim.com/badges/1dc5e1da-a5e9-4895-86b0-def9c72ba5b6/public_url" target="_blank" class="nes-badge cert-badge">
+                        <span class="is-success">Ver Credencial</span>
+                    </a>
+                </div>
+
+                <!-- MERN Fullstack -->
+                <div class="cert-card nes-container is-dark">
+                    <div class="cert-icon">💻</div>
+                    <h4>Software Development</h4>
+                    <p>MERN Fullstack - Coding Dojo</p>
+                    <a href="https://app.diplomasafe.com/es-ES/diploma/da499931ee96e4e88b42a8556da4d4d9e43f33678" target="_blank" class="nes-badge cert-badge">
+                        <span class="is-primary">Ver Credencial</span>
+                    </a>
+                </div>
+
+                <!-- Java OOP -->
+                <div class="cert-card nes-container is-dark">
+                    <div class="cert-icon">☕</div>
+                    <h4>Programación Orientada a Objetos</h4>
+                    <p>JAVA - Universidad del Cono Sur</p>
+                    <div class="cert-badge nes-badge">
+                        <span class="is-warning">Certificado</span>
                     </div>
                 </div>
 
-                <!-- TryHackMe -->
-                <div class="cert-card terminal-card">
-                    <div class="terminal-cert-header">
-                        <span>[ TryHackMe ]</span>
-                    </div>
-                    <div class="cert-achievements">
-                        <div class="achievement-line">
-                            <span class="check-mark">✓</span>
-                            <span>OWASP Top 10</span>
-                        </div>
-                        <div class="achievement-line">
-                            <span class="check-mark">✓</span>
-                            <span>Security Awareness</span>
-                        </div>
-                        <div class="achievement-line">
-                            <span class="check-mark">✓</span>
-                            <span>Linux Fundamentals</span>
-                        </div>
-                        <div class="achievement-line">
-                            <span class="progress-mark">▶</span>
-                            <span>Malware Analysis</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Education -->
-                <div class="cert-card nes-container is-rounded">
-                    <div class="cert-icon">📚</div>
-                    <h4>Análisis de Sistemas</h4>
-                    <p>En curso</p>
-                    <div class="cert-tag nes-badge">
-                        <span class="is-primary">Estudiante</span>
+                <!-- Python -->
+                <div class="cert-card nes-container is-dark">
+                    <div class="cert-icon">🐍</div>
+                    <h4>Programación Python</h4>
+                    <p>SNPP - Servicio Nacional de Promoción Profesional</p>
+                    <div class="cert-badge nes-badge">
+                        <span class="is-error">Certificado</span>
                     </div>
                 </div>
             </div>
 
-            <!-- KavaCon Achievement -->
-            <div class="achievement-box">
-                <div class="nes-container is-dark">
-                    <p>🎯 <strong>KavaCon 2025</strong> - Cybersecurity Conference (CPE Hours)</p>
+            <!-- TryHackMe - Terminal Style -->
+            <div class="terminal-card">
+                <div class="terminal-cert-header">
+                    <span class="thm-logo">🎯 TryHackMe - Formación Práctica en Ciberseguridad</span>
+                </div>
+                <div class="thm-content">
+                    <div class="thm-grid">
+                        <div class="thm-item">
+                            <span class="check">✓</span>
+                            <span>OWASP Top 10</span>
+                        </div>
+                        <div class="thm-item">
+                            <span class="check">✓</span>
+                            <span>Security Awareness</span>
+                        </div>
+                        <div class="thm-item">
+                            <span class="check">✓</span>
+                            <span>Linux Fundamentals</span>
+                        </div>
+                        <div class="thm-item">
+                            <span class="check">✓</span>
+                            <span>World Wide Web & Networking</span>
+                        </div>
+                        <div class="thm-item">
+                            <span class="check">✓</span>
+                            <span>Pentesting Fundamentals</span>
+                        </div>
+                        <div class="thm-item">
+                            <span class="check">✓</span>
+                            <span>Metasploit Framework</span>
+                        </div>
+                        <div class="thm-item">
+                            <span class="check">✓</span>
+                            <span>Red Team Operations</span>
+                        </div>
+                        <div class="thm-item">
+                            <span class="check">✓</span>
+                            <span>Network Services</span>
+                        </div>
+                        <div class="thm-item">
+                            <span class="check">✓</span>
+                            <span>Web Hacking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">▸ FORMACIÓN ACADÉMICA ◂</h2>
+
+            <div class="education-grid">
+                <div class="nes-container is-rounded">
+                    <h3>🎓 Licenciatura en Análisis de Sistemas</h3>
+                    <p><strong>Universidad Americana</strong></p>
+                    <p>2020 - 2025 | Malla terminada, tesis en curso</p>
+                </div>
+
+                <div class="nes-container is-rounded">
+                    <h3>⚡ Técnico Superior en Electrónica</h3>
+                    <p><strong>Universidad Nacional de Asunción</strong></p>
+                    <p>2012 - 2016 | Completado</p>
                 </div>
             </div>
         </div>
@@ -282,11 +325,7 @@
     <!-- Contact Section -->
     <section id="contact" class="section">
         <div class="container">
-            <h2 class="section-title">
-                <i class="nes-icon heart is-small"></i>
-                CONECTEMOS
-                <i class="nes-icon heart is-small"></i>
-            </h2>
+            <h2 class="section-title">▸ CONECTEMOS ◂</h2>
 
             <div class="terminal-contact">
                 <div class="terminal-header">
@@ -300,17 +339,14 @@
 <span class="prompt">┌──(visitor㉿portfolio)-[~/contact]</span>
 <span class="prompt">└─$</span> <span class="command">./get_contact_info.sh</span>
 
-<span class="info">[INFO]</span> Generando información de contacto...
+<span class="info">[INFO]</span> ¿Interesado en colaborar o tienes una oportunidad en Cybersecurity/QA?
 
 <span class="success">✓ Email:</span>       <a href="mailto:cesar.ayala1305@gmail.com">cesar.ayala1305@gmail.com</a>
-<span class="success">✓ LinkedIn:</span>    <a href="https://linkedin.com/in/ces-sebastian-ayala/" target="_blank">https://www.linkedin.com/in/ces-sebastian-ayala/</a>
+<span class="success">✓ LinkedIn:</span>    <a href="https://linkedin.com/in/ces-sebastian-ayala/" target="_blank">linkedin.com/in/sebastian-ayala</a>
 <span class="success">✓ GitHub:</span>      <a href="https://github.com/cs4rr" target="_blank">github.com/cs4rr</a>
-<span class="success">✓ TryHackMe:</span>   <a href="https://tryhackme.com/p/koveras" target="_blank">tryhackme.com/p/koveras</a>
+<span class="success">✓ TryHackMe:</span>   <a href="https://tryhackme.com/p/koveras" target="_blank">tryhackme.com/p/cs4rr</a>
 
-<span class="info">[INFO]</span> Ubicación: 📍 San Lorenzo, Paraguay
-
-<span class="prompt">└─$</span> <span class="command">echo "¿Buscas un Pentester Junior? ¡Hablemos!"</span>
-<span class="output">¿Buscas un Pentester Junior? ¡Hablemos!</span>
+<span class="info">[INFO]</span> Ubicación: 📍 Ñemby, Paraguay
 
 <span class="prompt">└─$</span> <span class="cursor-blink">█</span>
                     </pre>
@@ -319,35 +355,80 @@
 
             <!-- Social Buttons -->
             <div class="social-buttons">
-                <button type="button" class="nes-btn is-primary">
-                    <i class="nes-icon gmail is-small"></i> Email
-                </button>
-                <button type="button" class="nes-btn is-success">
-                    <i class="nes-icon linkedin is-small"></i> LinkedIn
-                </button>
-                <button type="button" class="nes-btn">
-                    <i class="nes-icon github is-small"></i> GitHub
-                </button>
+                <a href="mailto:cesar.ayala1305@gmail.com" class="nes-btn is-primary">📧 Email</a>
+                <a href="https://linkedin.com/in/ces-sebastian-ayala/" target="_blank" class="nes-btn is-success">💼 LinkedIn</a>
+                <a href="https://github.com/cs4rr" target="_blank" class="nes-btn">💻 GitHub</a>
+                <a href="https://tryhackme.com/p/koveras" target="_blank" class="nes-btn is-warning">🎯 TryHackMe</a>
+                <a href="https://drive.google.com/file/d/1TM1EtLWcSdEZmHlfP5XWQF-k4Ph5gwq5/view?usp=drive_link" target="_blank" class="nes-btn is-error">📄 Descargar CV</a>
+            </div>
+
+            <!-- Hacker Game Button -->
+            <div class="game-trigger">
+                <button class="nes-btn" id="hackerGameBtn">🎮 ¿Aburrido/a? Querés jugar algo?</button>
             </div>
         </div>
     </section>
 
+    <!-- Hacker Game Modal -->
+    <div id="hackerGameModal" class="game-modal">
+        <div class="game-container">
+            <div class="game-header">
+                <h2>🎮 HACKER TERMINAL GAME</h2>
+                <button class="close-game" id="closeGame">✕</button>
+            </div>
+            
+            <div class="game-instructions">
+                <p>¡Hackea el sistema escribiendo los comandos lo más rápido posible!</p>
+                <p>Escribe exactamente lo que ves y presiona ENTER</p>
+            </div>
+
+            <div class="game-terminal">
+                <div class="game-stats">
+                    <span>Score: <span id="gameScore">0</span></span>
+                    <span>Nivel: <span id="gameLevel">1</span></span>
+                    <span>Tiempo: <span id="gameTime">30</span>s</span>
+                </div>
+
+                <div class="game-output" id="gameOutput">
+                    <div class="game-command-display">
+                        <span class="game-prompt">root@target:~$</span>
+                        <span class="game-command" id="targetCommand"></span>
+                    </div>
+                </div>
+
+                <div class="game-input-area">
+                    <span class="game-prompt">hacker@kali:~$</span>
+                    <input type="text" id="gameInput" class="game-input" autocomplete="off" placeholder="Escribe el comando aquí..." disabled>
+                </div>
+
+                <div class="game-controls">
+                    <button class="nes-btn is-success" id="startGame">▶ INICIAR HACK</button>
+                    <button class="nes-btn is-error" id="resetGame" style="display: none;">🔄 REINICIAR</button>
+                </div>
+
+                <div class="game-result" id="gameResult"></div>
+            </div>
+
+            <div class="game-leaderboard">
+                <h3>🏆 Tu Mejor Puntaje</h3>
+                <p id="bestScore">0 pts</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
-            <div class="footer-terminal">
-                <pre>
-╔════════════════════════════════════════════════════════════╗
-║  © 2026 Sebastian Ayala | QA → Pentester Transition       ║
-║  Desarrollado con 💚 usando SNES.css + Custom Hacking CSS ║
-╚════════════════════════════════════════════════════════════╝
-                </pre>
-            </div>
+            <p class="footer-text">
+                © 2026 Sebastian Ayala | QA Engineer • Cybersecurity Practitioner
+            </p>
+            <p class="footer-subtext">
+                Desarrollado con 💚 usando SNES.css + Custom Security CSS
+            </p>
         </div>
     </footer>
 
     <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
-
 </html>
