@@ -151,8 +151,8 @@ document.addEventListener('DOMContentLoaded', () => {
     createParticles();
     
     // Console message
-    console.log('%c🔐 Security Portfolio Loaded', 'color: #00ff00; font-size: 20px; font-weight: bold;');
-    console.log('%cLooking for Easter eggs? Try the Konami Code! ↑↑↓↓←→←→BA', 'color: #00ffff; font-size: 12px;');
+    console.log('%c🔐 Security Portfolio', 'color: #00ff00; font-size: 20px; font-weight: bold;');
+    console.log('%cBuscás algún Easter egg? Probá el "Konami Code"! ↑↑↓↓←→←→BA', 'color: #00ffff; font-size: 12px;');
     console.log('%cDeveloped with SNES.css + Custom Security CSS by cs4rr', 'color: #33ff33; font-size: 10px;');
 });
 
@@ -389,4 +389,5 @@ const HackerGame = {
 // Initialize game when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     HackerGame.init();
+
 });
